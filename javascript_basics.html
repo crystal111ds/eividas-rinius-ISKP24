@@ -1,9 +1,28 @@
 <body>
+  <div id="ats"></div>
+  <div id="content"></div>
   <script>
-    function myFunc(a, b) {
-      return a * b
+    function myFunc(a, b, c) {
+      switch (true) {
+        case a < 10:
+          document.getElementById("content").innerHTML =
+            '<span style="color:red">per mazas skaicius</span>'
+          break
+        case b < 20:
+          document.getElementById("content").innerHTML =
+            '<span style="color:red">per mazas skaicius</span>'
+          result = 0
+          break
+        case c > 90:
+          document.getElementById("content").innerHTML =
+            '<span style="color:red">Ivestas per didelis skaicius</span>'
+          result = 0
+          break
+        default:
+          return a + b + c
+      }
     }
-    const result = myFunc(4, 3)
-    document.getElementById("content").innerHTML = result
+    const result = myFunc(11, 25, 200)
+    if (result !== 0) document.getElementById("ats").innerHTML = result
   </script>
 </body>
