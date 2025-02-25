@@ -1,28 +1,30 @@
 <body>
-  <div id="ats"></div>
-  <div id="content"></div>
+  <div id="Pirmas"></div>
+  <div id="Antras"></div>
+  <div id="Trecias"></div>
+  <button onclick="myFunc(11, 25, 50)">Spausk</button>
   <script>
     function myFunc(a, b, c) {
       switch (true) {
         case a < 10:
-          document.getElementById("content").innerHTML =
-            '<span style="color:red">per mazas skaicius</span>'
+          document.getElementById("Pirmas").innerHTML =
+            '<span style="color:red">Pirmas skaicius yra per mazas</span>'
           break
         case b < 20:
-          document.getElementById("content").innerHTML =
-            '<span style="color:red">per mazas skaicius</span>'
+          document.getElementById("Antras").innerHTML =
+            '<span style="color:red">Antras skaicius yra per mazas</span>'
           result = 0
           break
         case c > 90:
-          document.getElementById("content").innerHTML =
-            '<span style="color:red">Ivestas per didelis skaicius</span>'
+          document.getElementById("Trecias").innerHTML =
+            '<span style="color:red">Trecias skaicius yra per didelis</span>'
           result = 0
           break
         default:
           return a + b + c
       }
     }
-    const result = myFunc(11, 25, 200)
+    const result = myFunc(11, 25, 50)
     if (result !== 0) document.getElementById("ats").innerHTML = result
   </script>
 </body>
